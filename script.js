@@ -6,7 +6,10 @@ canvas.style.backgroundSize = "cover";
 
 let score = 0;
 let insects = [];
-
+const hitSound = new Audio('assets/hit.mp3');
+const bgMusic = new Audio('assets/musicafondo.mp3');
+bgMusic.loop = true;
+bgMusic.play();
 
 const insectImage = new Image();
 insectImage.src = "assets/insecto1.png";
@@ -56,6 +59,7 @@ canvas.addEventListener("click", (event) => {
         if (hit) {
             score++;
             document.getElementById("score").textContent = "Puntuación: " + score;
+            hitSound.play(); // Reproducir sonido al hacer clic
         }
         return !hit;
     });
