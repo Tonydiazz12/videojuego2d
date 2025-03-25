@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 canvas.style.background = "url('assets/fondo.jpg') no-repeat center center";
@@ -36,7 +35,7 @@ class Insect {
 
     containsPoint(x, y) {
         return x > this.posX - this.size / 2 && x < this.posX + this.size / 2 &&
-               y > this.posY - this.size / 2 && y < this.posY + this.size / 2;
+            y > this.posY - this.size / 2 && y < this.posY + this.size / 2;
     }
 }
 
@@ -75,8 +74,8 @@ function update() {
 }
 
 function resizeCanvas() {
-    canvas.width = window.innerWidth * 0.9; 
-    canvas.height = window.innerHeight * 0.8; 
+    canvas.width = window.innerWidth * 0.9;
+    canvas.height = window.innerHeight * 0.8;
 }
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
