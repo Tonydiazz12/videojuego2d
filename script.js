@@ -1,7 +1,8 @@
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
-canvas.style.background = "#ff8";
+canvas.style.background = "url('assets/fondo.jpg') no-repeat center center";
+canvas.style.backgroundSize = "cover";
 
 let score = 0;
 let insects = [];
